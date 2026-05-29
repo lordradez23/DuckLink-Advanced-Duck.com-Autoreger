@@ -1,5 +1,8 @@
 import asyncio
+import json
+import os
 import random
+import signal
 from typing import List, Optional
 
 import aiohttp
@@ -17,6 +20,7 @@ from core.utils.log import xlogger
 from core.utils.time import generate_afk_seconds
 
 OUTPUT_CSV = "accounts.csv"
+CHECKPOINT_FILE = "data/checkpoint.json"
 SIGNUP_URL = "https://quack.duckduckgo.com/api/auth/signup"
 VALIDATE_URL = "https://quack.duckduckgo.com/api/auth/validate-email-address"
 VERIFY_URL = "https://quack.duckduckgo.com/api/auth/verify"
@@ -203,6 +207,19 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     return None
 
 
+def load_checkpoint() -> set:
+    if os.path.exists(CHECKPOINT_FILE):
+        try:
+            with open(CHECKPOINT_FILE, 'r') as f:
+                return set(json.load(f))
+        except Exception:
+            return set()
+    return set()
+
+def save_checkpoint(history: set):
+    with open(CHECKPOINT_FILE, 'w') as f:
+        json.dump(list(history), f)
+
 async def main(mode_params: dict, num_accounts: int, max_connections: int, proxies: List[str], export):
     if export:
         xlogger.info(f"Export duck.com email from accounts.csv to {export}")
@@ -231,7 +248,13 @@ async def main(mode_params: dict, num_accounts: int, max_connections: int, proxi
         failure_count = 0
         created_accounts = []
 
+        checkpoint = load_checkpoint()
         for i, (email, nickname) in enumerate(email_generator):
+            if email in checkpoint:
+                xlogger.info(f"Skipping {email} (already registered in checkpoint)")
+                success_count += 1
+                continue
+
             proxy = random.choice(proxies)
             task = create_account(session, email, nickname, proxy, proxies, i + 1)
             tasks.append(task)
@@ -242,6 +265,8 @@ async def main(mode_params: dict, num_accounts: int, max_connections: int, proxi
                     if result:
                         created_accounts.append(result)
                         success_count += 1
+                        checkpoint.add(result["email"])
+                        save_checkpoint(checkpoint)
                     else:
                         failure_count += 1
                 tasks.clear()

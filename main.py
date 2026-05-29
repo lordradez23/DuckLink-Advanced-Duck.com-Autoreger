@@ -1,9 +1,18 @@
 import asyncio
 import argparse
+import signal
+import sys
 from core.register import main
 from core.utils.file import load_proxies
+from core.utils.log import xlogger
+
+def signal_handler(sig, frame):
+    xlogger.info("\n🛑 Shutdown signal received. Closing connections and exiting safely...")
+    sys.exit(0)
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
     parser = argparse.ArgumentParser(description="Autoreg duck.com emails")
 
     mode_group = parser.add_mutually_exclusive_group()
