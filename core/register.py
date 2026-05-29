@@ -12,7 +12,7 @@ from core.utils.file import save_to_csv, csv_to_txt
 from core.utils.generator.dots import dots_email_generator
 from core.utils.generator.nickname import generate_email
 from core.utils.generator.tags import tags_email_generator
-from core.utils.generator.useragent import generate_random_user_agent
+from core.utils.generator.useragent import generate_stealth_headers
 from core.utils.log import xlogger
 from core.utils.time import generate_afk_seconds
 
@@ -156,20 +156,21 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
         await asyncio.sleep(sleep_slow_sec)
 
     headers = HEADERS.copy()
-    user_agent = generate_random_user_agent("windows", "chrome")
-    headers['user-agent'] = user_agent
+    device = random.choice(["windows", "android", "linux"])
+    stealth_headers = generate_stealth_headers(device_type=device)
+    headers.update(stealth_headers)
 
-    xlogger.info(f"Generated email for registration: {email} | Username: {user} / Proxy: {proxy} / UA: {user_agent}")
+    xlogger.info(f"Generated identity for registration: {email} | Username: {user} | Device: {device} | Proxy: {proxy}")
 
     await send_pixel(session, "email-load-start-page", headers, proxy)
 
-    await asyncio.sleep(generate_afk_seconds())
+    await asyncio.sleep(generate_afk_seconds(1, 3))
     await send_pixel(session, "email-seenlist", headers, proxy)
-    await asyncio.sleep(generate_afk_seconds())
+    await asyncio.sleep(generate_afk_seconds(2, 5))
     await send_pixel(session, "email-load-privacy-policy-step", headers, proxy)
-    await asyncio.sleep(generate_afk_seconds())
+    await asyncio.sleep(generate_afk_seconds(1, 4))
     await send_pixel(session, "email-load-signup-page", headers, proxy)
-    await asyncio.sleep(generate_afk_seconds())
+    await asyncio.sleep(generate_afk_seconds(3, 7))
 
     if not await register_account(session, user, email, headers, proxy, proxies, secure_reply=1, dry_run=1):
         return None
