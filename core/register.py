@@ -74,8 +74,8 @@ async def validate_email(session: ClientSession, email: str, headers: dict, prox
         return data.get("valid", False)
 
 
-async def register_account(session: aiohttp.ClientSession, user: str, email: str, headers: dict, proxy: str,
-                           secure_reply=0, dry_run=0) -> Optional[dict]:
+async def register_account(session: aiohttp.ClientSession, user: str, email: str, headers: dict, initial_proxy: str, 
+                           proxies: List[str], secure_reply=0, dry_run=0) -> Optional[dict]:
     form_data = {
         'user': user,
         'email': email,
@@ -84,34 +84,41 @@ async def register_account(session: aiohttp.ClientSession, user: str, email: str
     if dry_run == 1:
         form_data['dry_run'] = '1'
 
+    current_proxy = initial_proxy
+
     for attempt in range(1, 4):
-        xlogger.debug(f"Attempt {attempt}/3 to register account for {email} using proxy: {form_data}")
+        xlogger.debug(f"Attempt {attempt}/3 to register account for {email} using proxy: {current_proxy}")
 
         try:
-            async with session.post(SIGNUP_URL, data=form_data, headers=headers, proxy=proxy) as response:
+            async with session.post(SIGNUP_URL, data=form_data, headers=headers, proxy=current_proxy) as response:
                 response_text = await response.text()
                 if response.status == 200:
-                    xlogger.debug(f"Successfully send request for {email} | {response_text}")
+                    xlogger.debug(f"Successfully sent request for {email} | {response_text}")
                     return await response.json()
-                elif response.status == 503:
-                    xlogger.warning(f"Service unavailable (503) for proxy {proxy}, retrying...")
+                
+                elif response.status in (503, 403, 429):
+                    xlogger.warning(f"Status {response.status} for proxy {current_proxy}. Rotating proxy and retrying...")
+                    current_proxy = random.choice(proxies)
+                    
                 else:
                     if '"error":"rc"' in response_text and '"cp":' in response_text:
-                        xlogger.warning(f"Captcha detected! Trying resolve..")
+                        xlogger.warning(f"Captcha detected! Trying to resolve...")
                         data = await response.json()
-                        xlogger.debug(data)
                         captcha_string = data.get('c', {}).get('cp')
                         captcha_resolve_string = await find_ducks(captcha_string)
                         form_data["ca"] = captcha_resolve_string
                         form_data["cp"] = captcha_string
+                        # Do not rotate proxy yet if it's just a captcha solve
 
                     if '"error":"unavailable_username"' in response_text:
-                        xlogger.warning(f"Username is busy")
+                        xlogger.warning(f"Username '{user}' is already taken.")
                         return None
 
                     xlogger.debug(f"Attempt {attempt}/3 failed - Status: {response.status}, Response: {response_text}")
+                    
         except aiohttp.ClientError as e:
-            xlogger.warning(f"Client error during registration for {email}: {e}")
+            xlogger.warning(f"Connection error for proxy {current_proxy} during registration: {e}. Rotating...")
+            current_proxy = random.choice(proxies)
 
         await asyncio.sleep(2)
 
@@ -140,7 +147,7 @@ async def verify_account(session: ClientSession, user: str, otp: str, headers: d
         await asyncio.sleep(2)
 
 
-async def create_account(session: ClientSession, email: str, user: str, proxy: str, i: int) -> Optional[dict]:
+async def create_account(session: ClientSession, email: str, user: str, proxy: str, proxies: List[str], i: int) -> Optional[dict]:
     xlogger.log_prefix_var.set(f"Reg {i} | ")
 
     if SLOWED_MODE:
@@ -164,7 +171,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     await send_pixel(session, "email-load-signup-page", headers, proxy)
     await asyncio.sleep(generate_afk_seconds())
 
-    if not await register_account(session, user, email, headers, proxy, secure_reply=1, dry_run=1):
+    if not await register_account(session, user, email, headers, proxy, proxies, secure_reply=1, dry_run=1):
         return None
 
     if await validate_email(session, email, headers, proxy):
@@ -172,7 +179,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
         await send_pixel(session, "email-load-review-page", headers, proxy)
         await asyncio.sleep(generate_afk_seconds())
 
-        response = await register_account(session, user, email, headers, proxy, secure_reply=0, dry_run=0)
+        response = await register_account(session, user, email, headers, proxy, proxies, secure_reply=0, dry_run=0)
         if response and response.get("status") == "created":
             while True:
                 await asyncio.sleep(15)
@@ -225,7 +232,7 @@ async def main(mode_params: dict, num_accounts: int, max_connections: int, proxi
 
         for i, (email, nickname) in enumerate(email_generator):
             proxy = random.choice(proxies)
-            task = create_account(session, email, nickname, proxy, i + 1)
+            task = create_account(session, email, nickname, proxy, proxies, i + 1)
             tasks.append(task)
 
             if len(tasks) >= max_connections or i == num_accounts - 1:
