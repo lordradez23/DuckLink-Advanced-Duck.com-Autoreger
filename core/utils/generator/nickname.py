@@ -1,22 +1,35 @@
+import os
 import random
 from datetime import datetime
 from typing import Tuple, Any
+from pathlib import Path
 
+def ensure_data_dirs():
+    """Ensure that the data and wordlist directories exist."""
+    Path("data/wordlist").mkdir(parents=True, exist_ok=True)
 
-def load_wordlist(filename):
-    with open(filename, 'r', encoding='utf-8') as file:
-        words = [line.strip() for line in file if line.strip()]
-    return words
+def load_wordlist(filename, default_list):
+    """Load a wordlist from a file, or return a default list if the file is missing."""
+    ensure_data_dirs()
+    if not os.path.exists(filename):
+        return default_list
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            words = [line.strip() for line in file if line.strip()]
+        return words if words else default_list
+    except Exception:
+        return default_list
 
 
 def generate_username():
-    first_names = load_wordlist('data/wordlist/names.txt')
-    last_names = load_wordlist('data/wordlist/surnames.txt')
-    words = load_wordlist('data/wordlist/words.txt')
+    first_names = load_wordlist('data/wordlist/names.txt', ["john", "jane", "alex", "sam", "cris"])
+    last_names = load_wordlist('data/wordlist/surnames.txt', ["doe", "smith", "jones", "williams", "brown"])
+    words = load_wordlist('data/wordlist/words.txt', ["sky", "blue", "fast", "cool", "duck"])
 
     first_name = random.choice(first_names)
     last_name = random.choice(last_names)
     word = random.choice(words)
+
 
     current_year = datetime.now().year
     formats = [
