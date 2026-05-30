@@ -6,8 +6,8 @@ from core.env import OPENROUTER_API_KEY
 from core.utils.log import xlogger
 
 
-SITE_URL = "https://github.com/Lordradeez/email-autoreg"
-APP_NAME = "Auto register duck.com email"
+SITE_URL = "https://github.com/lordradez23/DuckLink-Advanced-Duck.com-Autoreger"
+APP_NAME = "DuckLink"
 
 
 async def send_image_for_duck_check(session, image_id):

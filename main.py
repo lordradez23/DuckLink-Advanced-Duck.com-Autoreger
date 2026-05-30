@@ -13,7 +13,7 @@ def signal_handler(sig, frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
-    parser = argparse.ArgumentParser(description="Autoreg duck.com emails")
+    parser = argparse.ArgumentParser(description="DuckLink: Advanced Duck.com Autoreger")
 
     mode_group = parser.add_mutually_exclusive_group()
     mode_group.add_argument("--domain_mode", action="store_true", help="Generate emails using domain")

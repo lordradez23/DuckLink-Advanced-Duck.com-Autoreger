@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Lordradeez/email-autoreg)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/lordradez23/DuckLink-Advanced-Duck.com-Autoreger)
 
 DuckLink is a high-performance, asynchronous automation tool designed for bulk registration of duck.com email addresses. By combining advanced stealth techniques, AI-driven CAPTCHA solving, and human-behavior simulation, DuckLink provides a robust solution for large-scale email account creation.
 
@@ -40,8 +40,8 @@ Before you begin, ensure you have the following:
 
 1. **Clone the project:**
    ```bash
-   git clone https://github.com/Lordradeez/email-autoreg.git
-   cd email-autoreg
+   git clone https://github.com/lordradez23/DuckLink-Advanced-Duck.com-Autoreger.git
+   cd DuckLink-Advanced-Duck.com-Autoreger
    ```
 
 2. **Environment Setup:**
@@ -121,7 +121,7 @@ Simply run python main.py and follow the on-screen prompts to configure your reg
 ## Project Structure
 
 ```text
-email-autoreg/
+DuckLink/
 ├── core/
 │   ├── mail/           # Gmail API & OTP logic
 │   ├── utils/          # Generators (UA, Nickname, etc.)
@@ -144,5 +144,5 @@ email-autoreg/
 
 ---
 
-**Developed with by [Lordradeez](https://github.com/Lordradeez)**
+**Developed with ❤️ by [Lordradeez](https://github.com/lordradez23)**
 

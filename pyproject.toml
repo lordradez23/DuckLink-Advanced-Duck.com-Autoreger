@@ -1,8 +1,9 @@
 [tool.poetry]
-name = "email-autoreg"
+name = "ducklink-autoreger"
 version = "0.1.0"
-description = ""
+description = "Advanced high-performance asynchronous Duck.com email registration tool with AI captcha solving and stealth features."
 authors = ["Lordradeez <Lordradeez@users.noreply.github.com>"]
+
 readme = "README.md"
 package-mode = false
 
