@@ -80,3 +80,7 @@ proxy_fail_tracker = {}
 
 # Feature 17: Latency tracking list
 latency_tracker = []
+
+
+# Feature 18: Captcha stats
+captcha_stats = {'total_time': 0, 'solves': 0}
