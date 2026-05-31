@@ -29,3 +29,6 @@ FEATURE_9 = True
 
 # Implemented: Feature 10: Captcha Provider Enum
 FEATURE_10 = True
+
+# Implemented: Feature 11: Rotating File Handler
+FEATURE_11 = True
