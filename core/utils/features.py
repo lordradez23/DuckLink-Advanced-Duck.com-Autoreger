@@ -86,3 +86,6 @@ FEATURE_28 = True
 
 # Implemented: Feature 29: Connection timeout config
 FEATURE_29 = True
+
+# Implemented: Feature 30: Proxy auth encoding
+FEATURE_30 = True
