@@ -131,3 +131,6 @@ FEATURE_43 = True
 
 # Implemented: Feature 44: Proxy file change detection
 FEATURE_44 = True
+
+# Implemented: Feature 45: Nickname memory cleaner
+FEATURE_45 = True
