@@ -25,5 +25,8 @@ SLOWED_MODE = os.environ.get("SLOWED_MODE", "False").lower() in ("true", "1", "y
 # Feature 2: Proxy rotation delay env
 PROXY_ROTATION_DELAY = int(os.environ.get("PROXY_ROTATION_DELAY", 2))
 
+# Feature 3: Captcha solver configurable wait
+CAPTCHA_WAIT_TIME = int(os.environ.get('CAPTCHA_WAIT_TIME', 15))
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
