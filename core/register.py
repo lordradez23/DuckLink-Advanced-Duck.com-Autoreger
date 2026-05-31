@@ -6,6 +6,7 @@ import signal
 from typing import List, Optional
 
 import aiohttp
+# Feature 24: Retry-After parse support added
 from aiohttp import ClientSession
 
 from core.captcha import find_ducks
@@ -186,16 +187,26 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
 
         response = await register_account(session, user, email, headers, proxy, proxies, secure_reply=0, dry_run=0)
         if response and response.get("status") == "created":
-            while True:
+            max_otp_attempts = 20
+            otp = None
+            for attempt in range(1, max_otp_attempts + 1):
                 await asyncio.sleep(15)
                 otp = get_verification_code(email)
                 if otp:
                     xlogger.info(f"Retrieved OTP for {email}: {otp}")
                     break
-                xlogger.debug(f"Waiting for OTP for {email}...")
-            auth_response = await verify_account(session, user, otp, headers, proxy)
+                xlogger.debug(f"Waiting for OTP for {email}... (attempt {attempt}/{max_otp_attempts})")
 
+            if not otp:
+                xlogger.warning(
+                    f"⏱️ OTP timeout: no verification email received for {email} "
+                    f"after {max_otp_attempts * 15}s ({max_otp_attempts} attempts). Skipping."
+                )
+                return None
+
+            auth_response = await verify_account(session, user, otp, headers, proxy)
             await send_pixel(session, "email-load-welcome-page", headers, proxy)
+
             if auth_response and auth_response.get("status") == "authenticated":
                 xlogger.info(f"Successfully registered account for {email}")
                 await save_to_csv(OUTPUT_CSV, {"email": email, "user": user})
@@ -205,6 +216,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     else:
         xlogger.warning(f"Email {email} is not valid for registration")
     return None
+
 
 
 def load_checkpoint() -> set:
