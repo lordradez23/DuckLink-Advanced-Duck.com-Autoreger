@@ -72,3 +72,7 @@ xlogger = XLogger(logger)
 
 
 success_rate_tracker = {'success': 0, 'fail': 0}
+
+
+# Feature 16: detailed proxy fail stats
+proxy_fail_tracker = {}
