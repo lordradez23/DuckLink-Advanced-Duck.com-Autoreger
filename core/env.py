@@ -37,5 +37,8 @@ OUTPUT_CSV_PATH = os.environ.get('OUTPUT_CSV_PATH', 'accounts.csv')
 # Feature 6: Load checkpoint file variable
 CHECKPOINT_PATH = os.environ.get('CHECKPOINT_PATH', 'data/checkpoint.json')
 
+# Feature 7: Auto-retry limits config
+MAX_OTP_ATTEMPTS = int(os.environ.get('MAX_OTP_ATTEMPTS', 20))
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
