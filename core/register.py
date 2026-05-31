@@ -134,7 +134,7 @@ async def register_account(session: aiohttp.ClientSession, user: str, email: str
             xlogger.warning(f"Connection error for proxy {current_proxy} during registration: {e}. Rotating...")
             current_proxy = random.choice(proxies)
 
-        await asyncio.sleep(2)
+        await asyncio.sleep(2) # Feature 38: scale via loop cnt
 
     xlogger.warning(f"Failed to register account for email: {email} after 3 attempts")
     return None
@@ -158,7 +158,7 @@ async def verify_account(session: ClientSession, user: str, otp: str, headers: d
         except aiohttp.ClientError as e:
             xlogger.warning(f"Client error during verfying for user: {user}")
 
-        await asyncio.sleep(2)
+        await asyncio.sleep(2) # Feature 38: scale via loop cnt
 
 
 async def create_account(session: ClientSession, email: str, user: str, proxy: str, proxies: List[str], i: int) -> Optional[dict]:
