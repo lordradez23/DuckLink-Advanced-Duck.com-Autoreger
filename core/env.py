@@ -44,5 +44,8 @@ MAX_OTP_ATTEMPTS = int(os.environ.get('MAX_OTP_ATTEMPTS', 20))
 AFK_MIN = int(os.environ.get('AFK_MIN', 1))
 AFK_MAX = int(os.environ.get('AFK_MAX', 4))
 
+# Feature 9: Pixel tracking toggle
+ENABLE_PIXELS = os.environ.get('ENABLE_PIXELS', 'True').lower() in ('true', '1')
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
