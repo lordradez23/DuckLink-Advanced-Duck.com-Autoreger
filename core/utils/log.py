@@ -27,7 +27,7 @@ class XLogger:
         self.logger.add(
             sys.stdout,
             level="INFO",
-            format="<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | "
+            format="<green>{time:YYYY-MM-DDTHH:mm:ss.SSSZ}</green> | "
                    "<level>{level: <8}</level> | <light-red>{extra[prefix_log_message]}</light-red>"
                    "<cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - "
                    "<level>{message}</level>",
