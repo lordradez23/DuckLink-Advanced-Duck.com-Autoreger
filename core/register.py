@@ -154,15 +154,15 @@ async def verify_account(session: ClientSession, user: str, otp: str, headers: d
 async def create_account(session: ClientSession, email: str, user: str, proxy: str, proxies: List[str], i: int) -> Optional[dict]:
     xlogger.log_prefix_var.set(f"Reg {i} | ")
 
-    if SLOWED_MODE:
-        sleep_slow_sec = generate_afk_seconds(45, 200)
-        xlogger.info(f"SLOWED_MODE = True. Sleeping for {sleep_slow_sec} seconds")
-        await asyncio.sleep(sleep_slow_sec)
-
     headers = HEADERS.copy()
     device = random.choice(["windows", "android", "linux"])
     stealth_headers = generate_stealth_headers(device_type=device)
     headers.update(stealth_headers)
+
+    if SLOWED_MODE:
+        sleep_slow_sec = generate_afk_seconds(45, 200)
+        xlogger.info(f"SLOWED_MODE = True. Sleeping for {sleep_slow_sec} seconds")
+        await asyncio.sleep(sleep_slow_sec)
 
     xlogger.info(f"Generated identity for registration: {email} | Username: {user} | Device: {device} | Proxy: {proxy}")
 
