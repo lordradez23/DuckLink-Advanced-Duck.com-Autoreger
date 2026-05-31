@@ -50,3 +50,6 @@ FEATURE_16 = True
 
 # Implemented: Feature 17: Connection latency logger
 FEATURE_17 = True
+
+# Implemented: Feature 18: Captcha stats tracker
+FEATURE_18 = True
