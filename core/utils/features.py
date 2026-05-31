@@ -32,3 +32,6 @@ FEATURE_10 = True
 
 # Implemented: Feature 11: Rotating File Handler
 FEATURE_11 = True
+
+# Implemented: Feature 12: JSON Log Formatter
+FEATURE_12 = True
