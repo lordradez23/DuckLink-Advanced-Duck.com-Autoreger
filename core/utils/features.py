@@ -71,3 +71,6 @@ FEATURE_23 = True
 
 # Implemented: Feature 24: Retry-After Header handler
 FEATURE_24 = True
+
+# Implemented: Feature 25: Custom TLS Ciphers
+FEATURE_25 = True
