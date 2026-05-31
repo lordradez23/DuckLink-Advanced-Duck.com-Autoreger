@@ -116,3 +116,6 @@ FEATURE_38 = True
 
 # Implemented: Feature 39: Secure reply flag randomization
 FEATURE_39 = True
+
+# Implemented: Feature 40: Account uniqueness verification
+FEATURE_40 = True
