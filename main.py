@@ -8,7 +8,7 @@ from core.utils.log import xlogger
 
 def signal_handler(sig, frame):
     xlogger.info("\n🛑 Shutdown signal received. Closing connections and exiting safely...")
-    sys.exit(0)
+    sys.exit(0) # Feature 43: clean exit signal intercept and save process
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
