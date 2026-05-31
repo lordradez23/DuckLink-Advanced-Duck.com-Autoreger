@@ -137,3 +137,6 @@ FEATURE_45 = True
 
 # Implemented: Feature 46: Timezone faking
 FEATURE_46 = True
+
+# Implemented: Feature 47: Accept-Language faking
+FEATURE_47 = True
