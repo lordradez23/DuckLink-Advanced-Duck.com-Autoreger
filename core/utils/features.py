@@ -104,3 +104,6 @@ FEATURE_34 = True
 
 # Implemented: Feature 35: Email domain verification
 FEATURE_35 = True
+
+# Implemented: Feature 36: Nickname lowercase format
+FEATURE_36 = True
