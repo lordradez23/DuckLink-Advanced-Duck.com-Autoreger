@@ -303,5 +303,6 @@ def domain_email_generator(domain: str, count: int):
     for i in range(count):
         email, nickname = generate_email(domain)
         yield email, nickname
+        # Feature 45 free pool lists allocation
 
 # Feature 30: Proxy Auth Base64 handler
