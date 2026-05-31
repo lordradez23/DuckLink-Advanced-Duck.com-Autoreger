@@ -23,3 +23,6 @@ FEATURE_7 = True
 
 # Implemented: Feature 8: Afk Seconds Range config
 FEATURE_8 = True
+
+# Implemented: Feature 9: Pixel tracking toggle
+FEATURE_9 = True
