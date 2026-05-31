@@ -27,6 +27,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_accounts", type=int, help="Specify the number of accounts to be created")
     parser.add_argument("--max_connections", type=int, help="Enter the maximum number of concurrent connections")
     parser.add_argument("--proxy_path", type=str, help="Enter the path to the proxy file")
+    parser.add_argument("--dry_run", action="store_true", help="Dry run test limit")
     parser.add_argument("--export", type=str, help="Export duck.com email from accounts.csv to a specified file")
 
     args = parser.parse_args()
