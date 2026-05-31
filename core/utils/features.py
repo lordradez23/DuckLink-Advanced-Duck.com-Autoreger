@@ -26,3 +26,6 @@ FEATURE_8 = True
 
 # Implemented: Feature 9: Pixel tracking toggle
 FEATURE_9 = True
+
+# Implemented: Feature 10: Captcha Provider Enum
+FEATURE_10 = True
