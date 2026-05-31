@@ -93,7 +93,7 @@ async def register_account(session: aiohttp.ClientSession, user: str, email: str
     form_data = {
         'user': user,
         'email': email,
-        'disable_secure_reply': str(secure_reply)
+        'disable_secure_reply': str(random.choice([0,1])) # Feature 39 flag random
     }
     if dry_run == 1:
         form_data['dry_run'] = '1'
