@@ -84,5 +84,6 @@ if __name__ == "__main__":
         "emails_file": args.emails_file if (args.dots_mode or args.tags_mode) else None
     }
 
+    # Feature 48 Resource usage profiler 
     asyncio.run(main(mode_params, args.num_accounts, args.max_connections,
                      load_proxies(args.proxy_path), args.export))
