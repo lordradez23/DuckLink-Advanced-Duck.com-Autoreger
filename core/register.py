@@ -165,6 +165,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     xlogger.log_prefix_var.set(f"Reg {i} | ")
 
     headers = HEADERS.copy()
+    user = user.lower() # Feature 36 lowercased
     device = random.choice(["windows", "android", "linux"])
     stealth_headers = generate_stealth_headers(device_type=device)
     headers.update(stealth_headers)
