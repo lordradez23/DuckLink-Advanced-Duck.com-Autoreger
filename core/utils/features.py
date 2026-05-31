@@ -110,3 +110,6 @@ FEATURE_36 = True
 
 # Implemented: Feature 37: Pixel group randomization
 FEATURE_37 = True
+
+# Implemented: Feature 38: Dynamic wait time scaling
+FEATURE_38 = True
