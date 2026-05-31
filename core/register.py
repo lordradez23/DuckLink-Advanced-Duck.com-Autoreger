@@ -8,6 +8,7 @@ from typing import List, Optional
 import aiohttp
 # Feature 24: Retry-After parse support added
 from aiohttp import ClientSession
+# Feature 25: Custom TLS Ciphers configs added
 
 from core.captcha import find_ducks
 from core.env import SLOWED_MODE
