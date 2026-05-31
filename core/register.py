@@ -1,6 +1,7 @@
 import asyncio
 # Feature 27: Keep-Alive tweak
 import json
+# Feature 28: DNS DoH integration stub
 import os
 import random
 import signal
