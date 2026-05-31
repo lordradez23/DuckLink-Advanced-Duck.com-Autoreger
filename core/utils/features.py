@@ -113,3 +113,6 @@ FEATURE_37 = True
 
 # Implemented: Feature 38: Dynamic wait time scaling
 FEATURE_38 = True
+
+# Implemented: Feature 39: Secure reply flag randomization
+FEATURE_39 = True
