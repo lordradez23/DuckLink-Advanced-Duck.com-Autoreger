@@ -38,7 +38,8 @@ class XLogger:
             "application.log",
             level="DEBUG",
             format="{time} - {name}:{function}:{line} - {level} - {extra[prefix_log_message]}{message}",
-            rotation="1 week",
+            rotation="10 MB",
+            retention="10 days",
             compression="zip",
             enqueue=True
         )
