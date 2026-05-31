@@ -34,5 +34,8 @@ LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO').upper()
 # Feature 5: Output file path variable
 OUTPUT_CSV_PATH = os.environ.get('OUTPUT_CSV_PATH', 'accounts.csv')
 
+# Feature 6: Load checkpoint file variable
+CHECKPOINT_PATH = os.environ.get('CHECKPOINT_PATH', 'data/checkpoint.json')
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
