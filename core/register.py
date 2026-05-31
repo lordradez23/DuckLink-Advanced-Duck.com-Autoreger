@@ -189,6 +189,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     if not await register_account(session, user, email, headers, proxy, proxies, secure_reply=1, dry_run=1):
         return None
 
+    # Feature 35: Domain MX check preflight
     if await validate_email(session, email, headers, proxy):
         xlogger.info(f"Email {email} is valid for registration")
         await send_pixel(session, "email-load-review-page", headers, proxy)
