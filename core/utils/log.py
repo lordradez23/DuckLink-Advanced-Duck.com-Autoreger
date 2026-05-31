@@ -46,6 +46,12 @@ class XLogger:
             enqueue=True
         )
 
+        self.logger.add(
+            "crash.log",
+            level="ERROR",
+            backtrace=True,
+            diagnose=True
+        )
         self.log_prefix_var = contextvars.ContextVar("log_prefix_var", default="")
         logging.basicConfig(handlers=[InterceptHandler(self.log_prefix_var)], level=logging.DEBUG)
 
