@@ -119,3 +119,6 @@ FEATURE_39 = True
 
 # Implemented: Feature 40: Account uniqueness verification
 FEATURE_40 = True
+
+# Implemented: Feature 41: CSV Export to JSON
+FEATURE_41 = True
