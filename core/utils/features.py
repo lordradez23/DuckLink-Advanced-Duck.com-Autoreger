@@ -98,3 +98,6 @@ FEATURE_32 = True
 
 # Implemented: Feature 33: Checkpoint autosave interval
 FEATURE_33 = True
+
+# Implemented: Feature 34: Soft-fail recovery
+FEATURE_34 = True
