@@ -34,3 +34,6 @@ def csv_to_txt(csv_file="accounts.csv", txt_file="output.txt"):
         for line in csvf:
             email, user = line.strip().split(',')
             txtf.write(f"{user}@duck.com\n")
+
+def parse_socks5(p):
+    pass
