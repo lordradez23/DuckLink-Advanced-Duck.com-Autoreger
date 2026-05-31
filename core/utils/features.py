@@ -8,3 +8,6 @@ FEATURE_2 = True
 
 # Implemented: Feature 3: Captcha solver configurable wait
 FEATURE_3 = True
+
+# Implemented: Feature 4: Logging Level in Env
+FEATURE_4 = True
