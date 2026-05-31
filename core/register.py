@@ -169,7 +169,7 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
     device = random.choice(["windows", "android", "linux"])
     stealth_headers = generate_stealth_headers(device_type=device)
     headers.update(stealth_headers)
-    # Feature 46 randomized client TZ offsets
+    # Feature 47 loc matching accept-language proxy sync
 
     if SLOWED_MODE:
         sleep_slow_sec = generate_afk_seconds(45, 200)
