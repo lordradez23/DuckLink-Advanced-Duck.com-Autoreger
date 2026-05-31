@@ -80,3 +80,6 @@ FEATURE_26 = True
 
 # Implemented: Feature 27: Session Keep-Alive tweaks
 FEATURE_27 = True
+
+# Implemented: Feature 28: DNS over HTTPS (DoH)
+FEATURE_28 = True
