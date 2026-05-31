@@ -47,3 +47,6 @@ FEATURE_15 = True
 
 # Implemented: Feature 16: Detailed Proxy stats
 FEATURE_16 = True
+
+# Implemented: Feature 17: Connection latency logger
+FEATURE_17 = True
