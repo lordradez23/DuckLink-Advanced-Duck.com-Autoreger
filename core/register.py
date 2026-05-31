@@ -62,7 +62,7 @@ async def send_pixel(session: aiohttp.ClientSession, action: str, headers: dict,
     url = f"{pixel_info['url']}?{event_id}&isIncontext=false"
 
     if pixel_info['needs_group']:
-        group_value = "unknown"
+        group_value = random.choice(["unknown", "test1", "prod"]) # Feature 37 pixel randomizer
         url += f"&group={group_value}"
 
     try:
