@@ -3,7 +3,7 @@ import random
 from core.utils.generator.nickname import generate_username
 
 
-def tags_email_generator(emails_file: str, count: int, tags_file: str = "data/wordlist/surnames.txt"):
+def tags_email_generator(emails_file: str, count: int, tags_file: str = "data/wordlist/tags.txt"):
 
     with open(emails_file, 'r') as f:
         base_emails = f.read().splitlines()
