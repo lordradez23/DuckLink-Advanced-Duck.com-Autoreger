@@ -11,3 +11,6 @@ FEATURE_3 = True
 
 # Implemented: Feature 4: Logging Level in Env
 FEATURE_4 = True
+
+# Implemented: Feature 5: Output file path variable
+FEATURE_5 = True
