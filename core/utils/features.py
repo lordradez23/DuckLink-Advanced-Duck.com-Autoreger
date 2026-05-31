@@ -125,3 +125,6 @@ FEATURE_41 = True
 
 # Implemented: Feature 42: File creation wrapper
 FEATURE_42 = True
+
+# Implemented: Feature 43: Clean exit signal hook
+FEATURE_43 = True
