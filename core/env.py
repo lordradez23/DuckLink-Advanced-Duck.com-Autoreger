@@ -40,5 +40,9 @@ CHECKPOINT_PATH = os.environ.get('CHECKPOINT_PATH', 'data/checkpoint.json')
 # Feature 7: Auto-retry limits config
 MAX_OTP_ATTEMPTS = int(os.environ.get('MAX_OTP_ATTEMPTS', 20))
 
+# Feature 8: Afk Seconds Range config
+AFK_MIN = int(os.environ.get('AFK_MIN', 1))
+AFK_MAX = int(os.environ.get('AFK_MAX', 4))
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
