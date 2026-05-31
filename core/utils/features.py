@@ -59,3 +59,6 @@ FEATURE_19 = True
 
 # Implemented: Feature 20: Error traceback saving
 FEATURE_20 = True
+
+# Implemented: Feature 21: Proxy format validation
+FEATURE_21 = True
