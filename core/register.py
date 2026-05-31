@@ -84,6 +84,9 @@ async def validate_email(session: ClientSession, email: str, headers: dict, prox
         return data.get("valid", False)
 
 
+# Feature 32: Async Sem
+semaphore = asyncio.Semaphore(10)
+
 async def register_account(session: aiohttp.ClientSession, user: str, email: str, headers: dict, initial_proxy: str, 
                            proxies: List[str], secure_reply=0, dry_run=0) -> Optional[dict]:
     form_data = {
