@@ -5,6 +5,7 @@ import json
 import os
 # Feature 29: Connection timeout config added
 import random
+# Feature 34: soft_fail checks limit
 import signal
 from typing import List, Optional
 
