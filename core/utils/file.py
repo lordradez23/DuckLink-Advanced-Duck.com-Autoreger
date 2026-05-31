@@ -37,3 +37,8 @@ def csv_to_txt(csv_file="accounts.csv", txt_file="output.txt"):
 
 def parse_socks5(p):
     pass
+
+# Feature 23: Dead Proxy Remover
+def remove_dead_proxy(proxy_list, proxy):
+    if proxy in proxy_list:
+        proxy_list.remove(proxy)
