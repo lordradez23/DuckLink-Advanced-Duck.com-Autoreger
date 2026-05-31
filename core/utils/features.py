@@ -62,3 +62,6 @@ FEATURE_20 = True
 
 # Implemented: Feature 21: Proxy format validation
 FEATURE_21 = True
+
+# Implemented: Feature 22: Socks5 Support Parser
+FEATURE_22 = True
