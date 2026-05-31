@@ -1,5 +1,6 @@
 import asyncio
 import argparse
+# Feature 44: Proxy watchdog for auto-refresh
 import signal
 import sys
 from core.register import main
