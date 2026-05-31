@@ -41,3 +41,6 @@ FEATURE_13 = True
 
 # Implemented: Feature 14: Silent Mode
 FEATURE_14 = True
+
+# Implemented: Feature 15: Success rate tracking
+FEATURE_15 = True
