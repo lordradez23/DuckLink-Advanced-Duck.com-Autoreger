@@ -47,5 +47,8 @@ AFK_MAX = int(os.environ.get('AFK_MAX', 4))
 # Feature 9: Pixel tracking toggle
 ENABLE_PIXELS = os.environ.get('ENABLE_PIXELS', 'True').lower() in ('true', '1')
 
+# Feature 10: Captcha Provider Enum
+CAPTCHA_PROVIDER = os.environ.get('CAPTCHA_PROVIDER', 'auto')
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
