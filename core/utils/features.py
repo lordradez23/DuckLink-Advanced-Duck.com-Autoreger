@@ -140,3 +140,6 @@ FEATURE_46 = True
 
 # Implemented: Feature 47: Accept-Language faking
 FEATURE_47 = True
+
+# Implemented: Feature 48: Memory usage logging
+FEATURE_48 = True
