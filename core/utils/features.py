@@ -14,3 +14,6 @@ FEATURE_4 = True
 
 # Implemented: Feature 5: Output file path variable
 FEATURE_5 = True
+
+# Implemented: Feature 6: Load checkpoint file variable
+FEATURE_6 = True
