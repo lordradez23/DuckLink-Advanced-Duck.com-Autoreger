@@ -44,3 +44,6 @@ FEATURE_14 = True
 
 # Implemented: Feature 15: Success rate tracking
 FEATURE_15 = True
+
+# Implemented: Feature 16: Detailed Proxy stats
+FEATURE_16 = True
