@@ -38,3 +38,6 @@ FEATURE_12 = True
 
 # Implemented: Feature 13: Timestamp Standardization
 FEATURE_13 = True
+
+# Implemented: Feature 14: Silent Mode
+FEATURE_14 = True
