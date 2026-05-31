@@ -53,3 +53,6 @@ FEATURE_17 = True
 
 # Implemented: Feature 18: Captcha stats tracker
 FEATURE_18 = True
+
+# Implemented: Feature 19: Export CSV logs
+FEATURE_19 = True
