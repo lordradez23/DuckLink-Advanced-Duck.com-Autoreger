@@ -17,3 +17,6 @@ FEATURE_5 = True
 
 # Implemented: Feature 6: Load checkpoint file variable
 FEATURE_6 = True
+
+# Implemented: Feature 7: Auto-retry limits config
+FEATURE_7 = True
