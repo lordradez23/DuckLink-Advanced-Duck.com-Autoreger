@@ -92,3 +92,6 @@ FEATURE_30 = True
 
 # Implemented: Feature 31: Dry-run toggle CLI
 FEATURE_31 = True
+
+# Implemented: Feature 32: Async Semaphore mapping
+FEATURE_32 = True
