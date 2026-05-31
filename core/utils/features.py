@@ -95,3 +95,6 @@ FEATURE_31 = True
 
 # Implemented: Feature 32: Async Semaphore mapping
 FEATURE_32 = True
+
+# Implemented: Feature 33: Checkpoint autosave interval
+FEATURE_33 = True
