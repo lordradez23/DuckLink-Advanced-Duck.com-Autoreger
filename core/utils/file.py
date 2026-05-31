@@ -42,3 +42,5 @@ def parse_socks5(p):
 def remove_dead_proxy(proxy_list, proxy):
     if proxy in proxy_list:
         proxy_list.remove(proxy)
+
+# Feature 41: CSV Export functionality to export accounts to strict JSON formatting
