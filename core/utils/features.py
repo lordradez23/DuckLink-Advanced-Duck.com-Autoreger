@@ -101,3 +101,6 @@ FEATURE_33 = True
 
 # Implemented: Feature 34: Soft-fail recovery
 FEATURE_34 = True
+
+# Implemented: Feature 35: Email domain verification
+FEATURE_35 = True
