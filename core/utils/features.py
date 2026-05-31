@@ -134,3 +134,6 @@ FEATURE_44 = True
 
 # Implemented: Feature 45: Nickname memory cleaner
 FEATURE_45 = True
+
+# Implemented: Feature 46: Timezone faking
+FEATURE_46 = True
