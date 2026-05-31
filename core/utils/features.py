@@ -56,3 +56,6 @@ FEATURE_18 = True
 
 # Implemented: Feature 19: Export CSV logs
 FEATURE_19 = True
+
+# Implemented: Feature 20: Error traceback saving
+FEATURE_20 = True
