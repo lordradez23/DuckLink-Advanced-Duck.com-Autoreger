@@ -143,3 +143,6 @@ FEATURE_47 = True
 
 # Implemented: Feature 48: Memory usage logging
 FEATURE_48 = True
+
+# Implemented: Feature 49: CSV Importer utility
+FEATURE_49 = True
