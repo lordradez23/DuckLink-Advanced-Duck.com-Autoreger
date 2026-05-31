@@ -84,3 +84,7 @@ latency_tracker = []
 
 # Feature 18: Captcha stats
 captcha_stats = {'total_time': 0, 'solves': 0}
+
+
+def export_log_csv(file_path):
+    pass # Feature 19: Export stub
