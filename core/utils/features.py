@@ -89,3 +89,6 @@ FEATURE_29 = True
 
 # Implemented: Feature 30: Proxy auth encoding
 FEATURE_30 = True
+
+# Implemented: Feature 31: Dry-run toggle CLI
+FEATURE_31 = True
