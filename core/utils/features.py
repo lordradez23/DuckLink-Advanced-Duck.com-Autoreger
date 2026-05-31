@@ -35,3 +35,6 @@ FEATURE_11 = True
 
 # Implemented: Feature 12: JSON Log Formatter
 FEATURE_12 = True
+
+# Implemented: Feature 13: Timestamp Standardization
+FEATURE_13 = True
