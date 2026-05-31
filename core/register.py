@@ -230,6 +230,8 @@ async def create_account(session: ClientSession, email: str, user: str, proxy: s
 
 
 
+import hashlib
+
 def load_checkpoint() -> set:
     if os.path.exists(CHECKPOINT_FILE):
         try:
