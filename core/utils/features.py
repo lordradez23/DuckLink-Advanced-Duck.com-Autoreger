@@ -65,3 +65,6 @@ FEATURE_21 = True
 
 # Implemented: Feature 22: Socks5 Support Parser
 FEATURE_22 = True
+
+# Implemented: Feature 23: Dead Proxy Remover
+FEATURE_23 = True
