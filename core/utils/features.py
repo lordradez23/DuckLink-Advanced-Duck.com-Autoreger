@@ -107,3 +107,6 @@ FEATURE_35 = True
 
 # Implemented: Feature 36: Nickname lowercase format
 FEATURE_36 = True
+
+# Implemented: Feature 37: Pixel group randomization
+FEATURE_37 = True
