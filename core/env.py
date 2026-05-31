@@ -31,5 +31,8 @@ CAPTCHA_WAIT_TIME = int(os.environ.get('CAPTCHA_WAIT_TIME', 15))
 # Feature 4: Logging Level in Env
 LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO').upper()
 
+# Feature 5: Output file path variable
+OUTPUT_CSV_PATH = os.environ.get('OUTPUT_CSV_PATH', 'accounts.csv')
+
 if SLOWED_MODE:
     logger.info("🐢 SLOWED_MODE is ENABLED. Registration will mimic human delays.")
