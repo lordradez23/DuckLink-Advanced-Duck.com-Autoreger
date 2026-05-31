@@ -74,3 +74,6 @@ FEATURE_24 = True
 
 # Implemented: Feature 25: Custom TLS Ciphers
 FEATURE_25 = True
+
+# Implemented: Feature 26: Browser Fingerprint pool
+FEATURE_26 = True
