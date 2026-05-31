@@ -69,3 +69,6 @@ class XLogger:
 
 
 xlogger = XLogger(logger)
+
+
+success_rate_tracker = {'success': 0, 'fail': 0}
