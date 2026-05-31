@@ -24,8 +24,9 @@ class XLogger:
         self.logger = logger
         self.logger.remove()
 
-        self.logger.add(
-            sys.stdout,
+        if os.environ.get("SILENT_MODE", "False").lower() != "true":
+            self.logger.add(
+                sys.stdout,
             level="INFO",
             format="<green>{time:YYYY-MM-DDTHH:mm:ss.SSSZ}</green> | "
                    "<level>{level: <8}</level> | <light-red>{extra[prefix_log_message]}</light-red>"
