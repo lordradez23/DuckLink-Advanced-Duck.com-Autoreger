@@ -77,3 +77,6 @@ FEATURE_25 = True
 
 # Implemented: Feature 26: Browser Fingerprint pool
 FEATURE_26 = True
+
+# Implemented: Feature 27: Session Keep-Alive tweaks
+FEATURE_27 = True
