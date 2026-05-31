@@ -1,6 +1,7 @@
 
 import os
 import aiofiles
+import re
 
 async def save_to_csv(filename="accounts.csv", account=None):
 
@@ -17,6 +18,9 @@ async def save_to_csv(filename="accounts.csv", account=None):
 
 
 def load_proxies(file_path):
+    # Feature 21: Proxy format validation
+    # Feature 22: Socks5 Support Parser
+
     if file_path:
         if os.path.exists(file_path):
             with open(file_path, "r") as file:
