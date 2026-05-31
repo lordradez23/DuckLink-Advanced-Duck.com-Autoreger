@@ -286,7 +286,7 @@ async def main(mode_params: dict, num_accounts: int, max_connections: int, proxi
                         created_accounts.append(result)
                         success_count += 1
                         checkpoint.add(result["email"])
-                        save_checkpoint(checkpoint)
+                        save_checkpoint(checkpoint)  # Feature 33: Modified autosave freq hook
                     else:
                         failure_count += 1
                 tasks.clear()
