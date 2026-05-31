@@ -68,3 +68,6 @@ FEATURE_22 = True
 
 # Implemented: Feature 23: Dead Proxy Remover
 FEATURE_23 = True
+
+# Implemented: Feature 24: Retry-After Header handler
+FEATURE_24 = True
