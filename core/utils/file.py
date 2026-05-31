@@ -1,5 +1,6 @@
 
 import os
+# Feature 42: Data directory sanity wrapper hooks
 import aiofiles
 import re
 
