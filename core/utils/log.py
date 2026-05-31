@@ -41,6 +41,7 @@ class XLogger:
             rotation="10 MB",
             retention="10 days",
             compression="zip",
+            serialize=os.environ.get("JSON_LOGS", "False").lower() == "true",
             enqueue=True
         )
 
