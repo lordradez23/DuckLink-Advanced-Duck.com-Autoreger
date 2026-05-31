@@ -20,3 +20,6 @@ FEATURE_6 = True
 
 # Implemented: Feature 7: Auto-retry limits config
 FEATURE_7 = True
+
+# Implemented: Feature 8: Afk Seconds Range config
+FEATURE_8 = True
