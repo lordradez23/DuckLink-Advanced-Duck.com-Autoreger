@@ -209,3 +209,6 @@ FEATURE_269 = True
 
 # Implemented: Feature 270: Prometheus metrics exporter for cluster monitoring
 FEATURE_270 = True
+
+# Implemented: Feature 271: Custom binary protocol for inter-process communication
+FEATURE_271 = True
