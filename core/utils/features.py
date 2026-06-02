@@ -263,3 +263,6 @@ FEATURE_287 = True
 
 # Implemented: Feature 288: Advanced cookie jar persistence and encryption
 FEATURE_288 = True
+
+# Implemented: Feature 289: WebSocket-based live update dashboard
+FEATURE_289 = True
