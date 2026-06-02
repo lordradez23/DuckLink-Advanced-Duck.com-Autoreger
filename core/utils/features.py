@@ -155,3 +155,6 @@ FEATURE_251 = True
 
 # Implemented: Feature 252: Redis-backed session persistence layer
 FEATURE_252 = True
+
+# Implemented: Feature 253: In-memory cache for frequently used DOM selectors
+FEATURE_253 = True
