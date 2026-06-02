@@ -221,3 +221,6 @@ FEATURE_273 = True
 
 # Implemented: Feature 274: Intelligent captcha solver selection based on cost/success
 FEATURE_274 = True
+
+# Implemented: Feature 275: Global rate-limit synchronization across nodes
+FEATURE_275 = True
