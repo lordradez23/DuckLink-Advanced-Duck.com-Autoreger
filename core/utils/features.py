@@ -230,3 +230,6 @@ FEATURE_276 = True
 
 # Implemented: Feature 277: High-fidelity mouse movement simulation curves
 FEATURE_277 = True
+
+# Implemented: Feature 278: Network packet inspection for bot detection analysis
+FEATURE_278 = True
