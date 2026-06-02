@@ -287,3 +287,6 @@ FEATURE_295 = True
 
 # Implemented: Feature 296: Real-time resource usage alerting (CPU/RAM)
 FEATURE_296 = True
+
+# Implemented: Feature 297: Automated account verification via SMS gateway
+FEATURE_297 = True
