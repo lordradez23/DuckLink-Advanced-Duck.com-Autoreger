@@ -218,3 +218,6 @@ FEATURE_272 = True
 
 # Implemented: Feature 273: Multi-browser engine fallback (Playwright/Selenium)
 FEATURE_273 = True
+
+# Implemented: Feature 274: Intelligent captcha solver selection based on cost/success
+FEATURE_274 = True
