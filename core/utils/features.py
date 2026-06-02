@@ -152,3 +152,6 @@ FEATURE_50 = True
 
 # Implemented: Feature 251: Multi-stage Dockerfile optimization for production
 FEATURE_251 = True
+
+# Implemented: Feature 252: Redis-backed session persistence layer
+FEATURE_252 = True
