@@ -158,3 +158,6 @@ FEATURE_252 = True
 
 # Implemented: Feature 253: In-memory cache for frequently used DOM selectors
 FEATURE_253 = True
+
+# Implemented: Feature 254: Dynamic user-agent profile switching based on OS
+FEATURE_254 = True
