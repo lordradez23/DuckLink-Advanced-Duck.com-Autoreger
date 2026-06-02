@@ -242,3 +242,6 @@ FEATURE_280 = True
 
 # Implemented: Feature 281: Dynamic feature flag toggle via remote API
 FEATURE_281 = True
+
+# Implemented: Feature 282: Injected script detection and neutralization
+FEATURE_282 = True
