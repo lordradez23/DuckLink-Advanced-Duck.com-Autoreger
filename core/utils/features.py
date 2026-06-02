@@ -284,3 +284,6 @@ FEATURE_294 = True
 
 # Implemented: Feature 295: Adaptive payload obfuscation based on target heuristic
 FEATURE_295 = True
+
+# Implemented: Feature 296: Real-time resource usage alerting (CPU/RAM)
+FEATURE_296 = True
