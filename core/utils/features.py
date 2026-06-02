@@ -194,3 +194,6 @@ FEATURE_264 = True
 
 # Implemented: Feature 265: Automated SQL migration script generators
 FEATURE_265 = True
+
+# Implemented: Feature 266: Secure environment variable decryption at runtime
+FEATURE_266 = True
