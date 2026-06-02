@@ -182,3 +182,6 @@ FEATURE_260 = True
 
 # Implemented: Feature 261: Adaptive retry backoff based on HTTP status code
 FEATURE_261 = True
+
+# Implemented: Feature 262: Sentiment analysis on error messages for routing
+FEATURE_262 = True
