@@ -224,3 +224,6 @@ FEATURE_274 = True
 
 # Implemented: Feature 275: Global rate-limit synchronization across nodes
 FEATURE_275 = True
+
+# Implemented: Feature 276: Automated bug report generation with stack trace
+FEATURE_276 = True
