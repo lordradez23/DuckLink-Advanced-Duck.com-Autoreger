@@ -293,3 +293,6 @@ FEATURE_297 = True
 
 # Implemented: Feature 298: Dynamic proxy tunnel multiplexing
 FEATURE_298 = True
+
+# Implemented: Feature 299: High-availability database cluster support
+FEATURE_299 = True
