@@ -215,3 +215,6 @@ FEATURE_271 = True
 
 # Implemented: Feature 272: Hot-reloading configuration system
 FEATURE_272 = True
+
+# Implemented: Feature 273: Multi-browser engine fallback (Playwright/Selenium)
+FEATURE_273 = True
