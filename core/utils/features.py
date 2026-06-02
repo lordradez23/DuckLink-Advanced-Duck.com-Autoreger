@@ -161,3 +161,6 @@ FEATURE_253 = True
 
 # Implemented: Feature 254: Dynamic user-agent profile switching based on OS
 FEATURE_254 = True
+
+# Implemented: Feature 255: Real-time network throughput throttling
+FEATURE_255 = True
