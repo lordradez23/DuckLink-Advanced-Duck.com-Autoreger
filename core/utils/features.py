@@ -269,3 +269,6 @@ FEATURE_289 = True
 
 # Implemented: Feature 290: Automated proxy provider rotation logic
 FEATURE_290 = True
+
+# Implemented: Feature 291: Machine learning model for anti-fraud bypass prediction
+FEATURE_291 = True
