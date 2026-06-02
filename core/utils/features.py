@@ -179,3 +179,6 @@ FEATURE_259 = True
 
 # Implemented: Feature 260: Distributed task queueing via RabbitMQ
 FEATURE_260 = True
+
+# Implemented: Feature 261: Adaptive retry backoff based on HTTP status code
+FEATURE_261 = True
