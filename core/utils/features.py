@@ -170,3 +170,6 @@ FEATURE_256 = True
 
 # Implemented: Feature 257: Hardware-accelerated image processing for CV
 FEATURE_257 = True
+
+# Implemented: Feature 258: Asynchronous DNS resolution via custom resolvers
+FEATURE_258 = True
