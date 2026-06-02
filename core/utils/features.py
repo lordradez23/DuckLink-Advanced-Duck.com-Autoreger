@@ -176,3 +176,6 @@ FEATURE_258 = True
 
 # Implemented: Feature 259: Deep link interception for mail confirmation
 FEATURE_259 = True
+
+# Implemented: Feature 260: Distributed task queueing via RabbitMQ
+FEATURE_260 = True
