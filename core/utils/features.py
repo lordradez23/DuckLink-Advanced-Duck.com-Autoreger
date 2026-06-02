@@ -191,3 +191,6 @@ FEATURE_263 = True
 
 # Implemented: Feature 264: Webhook integration with PagerDuty for critical failures
 FEATURE_264 = True
+
+# Implemented: Feature 265: Automated SQL migration script generators
+FEATURE_265 = True
