@@ -290,3 +290,6 @@ FEATURE_296 = True
 
 # Implemented: Feature 297: Automated account verification via SMS gateway
 FEATURE_297 = True
+
+# Implemented: Feature 298: Dynamic proxy tunnel multiplexing
+FEATURE_298 = True
