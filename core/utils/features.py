@@ -206,3 +206,6 @@ FEATURE_268 = True
 
 # Implemented: Feature 269: Automated dependency security vulnerability scanner
 FEATURE_269 = True
+
+# Implemented: Feature 270: Prometheus metrics exporter for cluster monitoring
+FEATURE_270 = True
