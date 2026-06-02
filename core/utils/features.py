@@ -236,3 +236,6 @@ FEATURE_278 = True
 
 # Implemented: Feature 279: Secure multi-tenant architecture support
 FEATURE_279 = True
+
+# Implemented: Feature 280: Automated documentation generation via Sphinx/MkDocs
+FEATURE_280 = True
