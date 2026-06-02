@@ -212,3 +212,6 @@ FEATURE_270 = True
 
 # Implemented: Feature 271: Custom binary protocol for inter-process communication
 FEATURE_271 = True
+
+# Implemented: Feature 272: Hot-reloading configuration system
+FEATURE_272 = True
