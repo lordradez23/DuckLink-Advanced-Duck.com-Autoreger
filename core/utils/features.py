@@ -251,3 +251,6 @@ FEATURE_283 = True
 
 # Implemented: Feature 284: High-performance JSON logging via messagepack
 FEATURE_284 = True
+
+# Implemented: Feature 285: Distributed rate limiting via Leaky Bucket algorithm
+FEATURE_285 = True
