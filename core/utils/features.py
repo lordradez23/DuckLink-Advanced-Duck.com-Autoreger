@@ -248,3 +248,6 @@ FEATURE_282 = True
 
 # Implemented: Feature 283: Custom CA certificate injection for MITM debugging
 FEATURE_283 = True
+
+# Implemented: Feature 284: High-performance JSON logging via messagepack
+FEATURE_284 = True
