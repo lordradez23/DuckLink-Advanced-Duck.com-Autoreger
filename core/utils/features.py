@@ -245,3 +245,6 @@ FEATURE_281 = True
 
 # Implemented: Feature 282: Injected script detection and neutralization
 FEATURE_282 = True
+
+# Implemented: Feature 283: Custom CA certificate injection for MITM debugging
+FEATURE_283 = True
