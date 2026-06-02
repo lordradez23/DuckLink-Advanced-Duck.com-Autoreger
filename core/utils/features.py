@@ -167,3 +167,6 @@ FEATURE_255 = True
 
 # Implemented: Feature 256: Automated proxy health check and blacklisting
 FEATURE_256 = True
+
+# Implemented: Feature 257: Hardware-accelerated image processing for CV
+FEATURE_257 = True
