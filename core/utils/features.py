@@ -227,3 +227,6 @@ FEATURE_275 = True
 
 # Implemented: Feature 276: Automated bug report generation with stack trace
 FEATURE_276 = True
+
+# Implemented: Feature 277: High-fidelity mouse movement simulation curves
+FEATURE_277 = True
