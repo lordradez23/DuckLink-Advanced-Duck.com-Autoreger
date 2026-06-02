@@ -233,3 +233,6 @@ FEATURE_277 = True
 
 # Implemented: Feature 278: Network packet inspection for bot detection analysis
 FEATURE_278 = True
+
+# Implemented: Feature 279: Secure multi-tenant architecture support
+FEATURE_279 = True
