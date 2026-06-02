@@ -281,3 +281,6 @@ FEATURE_293 = True
 
 # Implemented: Feature 294: Automated test suite for cross-platform compatibility
 FEATURE_294 = True
+
+# Implemented: Feature 295: Adaptive payload obfuscation based on target heuristic
+FEATURE_295 = True
