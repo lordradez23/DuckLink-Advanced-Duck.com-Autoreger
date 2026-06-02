@@ -272,3 +272,6 @@ FEATURE_290 = True
 
 # Implemented: Feature 291: Machine learning model for anti-fraud bypass prediction
 FEATURE_291 = True
+
+# Implemented: Feature 292: Custom SSL context configuration for exotic proxies
+FEATURE_292 = True
