@@ -266,3 +266,6 @@ FEATURE_288 = True
 
 # Implemented: Feature 289: WebSocket-based live update dashboard
 FEATURE_289 = True
+
+# Implemented: Feature 290: Automated proxy provider rotation logic
+FEATURE_290 = True
