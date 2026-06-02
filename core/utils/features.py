@@ -173,3 +173,6 @@ FEATURE_257 = True
 
 # Implemented: Feature 258: Asynchronous DNS resolution via custom resolvers
 FEATURE_258 = True
+
+# Implemented: Feature 259: Deep link interception for mail confirmation
+FEATURE_259 = True
