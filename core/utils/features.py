@@ -197,3 +197,6 @@ FEATURE_265 = True
 
 # Implemented: Feature 266: Secure environment variable decryption at runtime
 FEATURE_266 = True
+
+# Implemented: Feature 267: Real-time account throughput visualizer
+FEATURE_267 = True
