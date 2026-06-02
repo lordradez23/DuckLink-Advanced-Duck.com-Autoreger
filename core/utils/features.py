@@ -164,3 +164,6 @@ FEATURE_254 = True
 
 # Implemented: Feature 255: Real-time network throughput throttling
 FEATURE_255 = True
+
+# Implemented: Feature 256: Automated proxy health check and blacklisting
+FEATURE_256 = True
